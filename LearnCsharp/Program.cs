@@ -8,6 +8,8 @@ namespace LearnCsharp
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
 
@@ -97,6 +99,10 @@ namespace LearnCsharp
             string PersonaMayor = string.Empty;
             int EdadMayor = 0;
 
+            string PersonaMenor = string.Empty;
+            int EdadMenor = 200;
+
+
 
             Console.WriteLine(" ");
             foreach (var item in personas)
@@ -106,10 +112,20 @@ namespace LearnCsharp
                     EdadMayor = item.Edad;
                     PersonaMayor = item.Nombres + " " + item.Apellidos;
                 }
+
+                if (item.Edad < EdadMenor)
+                {
+                    EdadMenor = item.Edad;
+                    PersonaMenor = item.Nombres + " " + item.Apellidos;
+                }
             }
                         
             Console.WriteLine("El mayor es " + PersonaMayor + " con " + Convert.ToString( EdadMayor) + " años");
-            
+            Console.WriteLine(string.Concat("El menor es ", PersonaMenor, " con ", Convert.ToString(EdadMenor), " años"));
+
+            //Tarea:
+            //1.Mostrar todos los mayores de edad
+            //2.Mostrar a todos los menores de edad.
 
             Console.Read();
         }
