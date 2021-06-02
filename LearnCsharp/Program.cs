@@ -91,6 +91,25 @@ namespace LearnCsharp
                 Console.WriteLine(item.Nombres + " " + item.Apellidos);
             }
 
+            //Quien es el mayor de todos
+            //Quien es el menor de todos
+
+            string PersonaMayor = string.Empty;
+            int EdadMayor = 0;
+
+
+            Console.WriteLine(" ");
+            foreach (var item in personas)
+            {
+                if (item.Edad > EdadMayor)
+                { 
+                    EdadMayor = item.Edad;
+                    PersonaMayor = item.Nombres + " " + item.Apellidos;
+                }
+            }
+                        
+            Console.WriteLine("El mayor es " + PersonaMayor + " con " + Convert.ToString( EdadMayor) + " años");
+            
 
             Console.Read();
         }
