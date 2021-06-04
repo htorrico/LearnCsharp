@@ -18,6 +18,23 @@ namespace LearnCsharp
         static void Main(string[] args)
         {
 
+            //AB = Raiz((xb - xa)2 + (yb - ya)2)
+            Coordenada coordenada1 = new Coordenada { x = 0, y = 0 };
+            Coordenada coordenada2 = new Coordenada { x = 3, y = 4 };
+
+            Linea linea = new Linea
+            {
+                p1 = coordenada1,
+                p2 = coordenada2
+            };
+
+            double distancia = linea.CalcularDistancia();
+            Console.WriteLine("La distancia es:");
+            Console.WriteLine(distancia);
+
+
+
+
             int area = 0;
             int perimetro = 0;
             int lado = 0;
